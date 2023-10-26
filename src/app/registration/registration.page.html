@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="titulo">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button routerLink="/home/" class="normal" color="tertiary">Volver a Inicio</ion-button>
+  <h2 class="subtitulo">Ingrese sus datos</h2>
+  <form>
+    <!--ETIQUETA NOMBRE -->
+    <ion-item>
+      <ion-label class="normal">Nombre:</ion-label>
+      <ion-input class="normal" [(ngModel)]="user.nombre" name="nombre" placeholder="Ingresa tu nombre" required></ion-input>
+    </ion-item>
+    <!-- ETIQUETA CONTRASEÑA -->
+    <ion-item>
+      <ion-label class="normal">Rut:</ion-label>
+      <ion-input class="normal" [(ngModel)]="user.rut" name="rut" placeholder="Ingresa tu rut" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="normal">Correo:</ion-label>
+      <ion-input class="normal" type="email" [(ngModel)]="user.email" name="email" placeholder="Ingresa tu correo" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="normal">Contraseña:</ion-label>
+      <ion-input class="normal" type="password"  [(ngModel)]="user.password" name="password" placeholder="Ingresa tu contraseña" required></ion-input>
+    </ion-item>
+    <!-- BOTON ENVIAR FORMULARIO -->
+    <ion-button class="normal" (click)="registrar(user)" color="dark" expand="block">Registrarse</ion-button>
+  </form>
+  
+</ion-content>
